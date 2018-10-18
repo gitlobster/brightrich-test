@@ -1,0 +1,26 @@
+.input {
+    position: relative;
+
+    input {
+       width: 100%;
+       height: 52px;
+
+       line-height: 52px;
+
+       color: #000;
+    }
+
+    &__error-text {
+        margin-bottom: 11px;
+
+        display: none;
+    }
+
+    &--error  .input__error-text {
+        display: block;
+    }
+
+    &--error input {
+        border-color: #f82b34;
+    }
+}

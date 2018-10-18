@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic');
+
+/* Дефолтные стили */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-size-adjust: none;
+}
+
+/* Формы */
+input, textarea, button {
+  font-family: $opensans;
+}
+
+input {
+}
+
+
+input, textarea {
+    font-size: 16px;
+
+    padding: 0 26px;
+
+    border: 1px solid #e5eaec;
+    border-radius: 25px;
+
+    outline: none;
+}
+
+textarea {
+    padding: 14px 26px;
+}
+
+button {
+    outline: none;
+}
+
+input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus, textarea:focus {
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.06);
+}
+
+::placeholder { 
+    color: #898989;
+    opacity: 1; 
+}
+
+:-ms-input-placeholder { 
+    color: #898989;
+}
+
+::-ms-input-placeholder { 
+    color: #898989;
+}
+
+button:focus {
+    box-shadow: 0 0 3pt 2pt rgba(87, 204, 139, 0.40);
+}
+
+
+/* Аккуратные таблицы */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Основные стили */
+html {
+  background: #d9e4e7;
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: $opensans;
+  font-size: 16px;
+  line-height: 20px;
+  height: 100%;
+  min-height: 100%;
+  letter-spacing: 0.16px;
+}
+
+/* Ссылки без дефолтного подчёркивания */
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 0 10px;
+
+    height: 100%;
+
+    @media #{$latex-mobile} {
+        display: block;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}

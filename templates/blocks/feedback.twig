@@ -1,0 +1,31 @@
+<div class="feedback">
+    <form action="/" class="feedback__form">
+        <div class="feedback__title">Обратная связь</div>
+        <div class="feedback__inputs">
+            <div class="input">
+                <input name="name" type="text" placeholder="Имя"/>
+            </div>
+            <div class="input">
+                <input name="second_name" type="text" placeholder="Фамилия"/>
+            </div>
+            <div class="input">
+                <div class="input__error-text">Некорректный номер телефона</div>
+                <input name="phone" type="tel" placeholder="Телефон" data-method="phoneValidate" data-input-rule="onlydigit"/>
+            </div>
+            <div class="input">
+                <div class="input__error-text">Некорректный e-mail адрес</div>
+                <input name="email" type="email" placeholder="E-mail" data-method="emailValidate"/>
+            </div>
+        </div>
+        <div class="comment">
+            <div class="comment__add-area">
+                <button id="comment-add" type="button" class="button button--circle comment__add">+</button>
+                <span class="comment__add-text">Добавить комментарий</span>
+            </div>
+            <textarea class="comment__textarea comment__textarea--hidden" name="comment" cols="30" rows="10" placeholder="Введите ваш комментарий"></textarea>
+        </div>
+        <button id="send" type="button" class="button button--deff feedback__send ">Отправить</button>
+    </form>
+    {% include 'success.twig' %}
+</div>
+
